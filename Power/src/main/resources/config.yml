@@ -1,0 +1,38 @@
+# Quand un pouvoir donne une épée / une armure, l'objet remplacé est rendu au joueur
+# (true) ou supprimé (false).
+return-replaced-items: true
+
+strength:
+  # Niveau de l'effet Strength (0 = Strength I, 1 = Strength II...)
+  effect-amplifier: 0
+  # Vitesse verticale donnée par Wind Burst après un smash
+  windburst-velocity: 1.1
+  # Distance de chute minimale pour déclencher un smash
+  smash-min-fall: 1.5
+
+speed:
+  # 1 = Speed II
+  effect-amplifier: 1
+
+saturation:
+  # Une pulsation d'absorption toutes les X secondes
+  absorption-interval-seconds: 30
+  # Coeurs d'absorption ajoutés à chaque pulsation
+  absorption-pulse-hearts: 2
+  # Maximum de coeurs d'absorption venant du pouvoir
+  absorption-max-hearts: 4
+
+health:
+  # Coeurs bonus permanents
+  bonus-hearts: 2
+  # Chance qu'un coup sur un joueur te soigne
+  heal-chance: 0.20
+  # Fenêtre (secondes) des dégâts infligés pris en compte pour le soin
+  heal-window-seconds: 2
+
+void:
+  # Chance, à chaque coup reçu, d'infliger Weakness + Blindness à l'attaquant
+  curse-chance: 0.10
+  curse-duration-seconds: 30
+  # Multiplicateur de durabilité de l'armure
+  armor-durability-multiplier: 2
