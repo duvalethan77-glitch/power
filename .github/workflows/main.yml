@@ -1,4 +1,4 @@
-name: Build plugin
+name: Build Power
 
 on:
   push:
@@ -21,20 +21,18 @@ jobs:
           distribution: temurin
           java-version: 21
           cache: maven
-          cache-dependency-path: NoLimits/pom.xml
 
       - name: Build
-        working-directory: NoLimits
         run: mvn -B package
 
       - name: Upload jar
         uses: actions/upload-artifact@v4
         with:
-          name: NoLimits
-          path: NoLimits/target/NoLimits-*.jar
+          name: Power
+          path: target/Power-*.jar
 
       - name: Publish release (tags v*)
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: NoLimits/target/NoLimits-*.jar
+          files: target/Power-*.jar
