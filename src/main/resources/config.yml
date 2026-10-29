@@ -1,0 +1,110 @@
+# Utilisation : clic droit avec un objet en main (sans objet, Minecraft n'envoie rien au serveur).
+# Chaque pouvoir a son propre cooldown (en secondes).
+
+activation:
+  # true = il faut s'accroupir (shift) en plus du clic droit
+  require-sneak: false
+  # true = la touche F (échange de main) déclenche aussi la capacité, même mains vides
+  swap-key: false
+
+# Particules autour des joueurs qui ont un pouvoir
+aura:
+  enabled: true
+
+# Recettes de craft des potions (voir /power info)
+recipes:
+  enabled: true
+
+lightning:
+  cooldown-seconds: 30
+  # Distance max pour viser une cible
+  range: 30
+  # Nombre d'éclairs et délai entre chacun (secondes)
+  strikes: 3
+  interval-seconds: 1.0
+  # Dégâts par éclair (2 = 1 coeur)
+  damage: 6.0
+  # Passif : chance par coup qu'un éclair tombe sur la cible
+  passive-chance: 0.10
+  passive-damage: 4.0
+
+ice:
+  cooldown-seconds: 25
+  range: 25
+  # Durée du gel de la cible
+  freeze-seconds: 3
+  # Passif : tes coups ralentissent la cible
+  passive-slow-seconds: 2
+
+blood:
+  cooldown-seconds: 40
+  # Passif : part des dégâts infligés rendue en vie (0.15 = 15 %)
+  lifesteal: 0.15
+  # Actif : durée du mode berserk
+  berserk-seconds: 8
+  # Bonus de dégâts max quand ta vie est presque à zéro (1.0 = +100 %)
+  berserk-max-bonus: 1.0
+
+fire:
+  cooldown-seconds: 20
+  # Passif : tes coups enflamment la cible
+  passive-burn-seconds: 3
+  # Puissance de l'explosion de la boule de feu
+  fireball-yield: 1.5
+  # La boule de feu met le feu aux blocs
+  incendiary: false
+  # La boule de feu détruit les blocs
+  break-blocks: false
+
+wind:
+  # Le cooldown démarre après le second dash (ou à la fin de la fenêtre)
+  cooldown-seconds: 15
+  # Temps pour faire le second dash après le premier
+  second-dash-window-seconds: 4
+  # Vitesse des dashs, rayon et force de la poussée des ennemis proches
+  dash-speed: 2.0
+  repel-radius: 4
+  repel-strength: 1.2
+
+shadow:
+  cooldown-seconds: 30
+  # Distance max pour viser la cible
+  range: 20
+  # Après la téléportation : durée pendant laquelle le prochain coup est renforcé
+  backstab-seconds: 4
+  # Bonus de dégâts du premier coup (0.5 = +50 %)
+  backstab-bonus: 0.5
+  # Passif : invisible quand le niveau de lumière est inférieur ou égal à cette valeur
+  dark-light-level: 4
+
+earth:
+  cooldown-seconds: 35
+  # Passif : réduction des dégâts subis (0.15 = 15 %) et résistance au recul (max 1.0)
+  damage-reduction: 0.15
+  knockback-resistance: 0.5
+  # Actif : nombre de piliers devant toi et dégâts de chacun
+  pillars: 5
+  pillar-damage: 4.0
+
+poison:
+  cooldown-seconds: 30
+  range: 15
+  # Passif : durée du poison appliqué par tes coups
+  passive-seconds: 3
+  # Actif : nuage toxique
+  cloud-radius: 3.0
+  cloud-seconds: 6
+  cloud-poison-seconds: 5
+
+light:
+  cooldown-seconds: 35
+  # Actif : vie rendue par la lumière du ciel (2 = 1 coeur) et durée de la régénération en plus
+  heal: 8.0
+  regen-seconds: 5
+
+phoenix:
+  cooldown-seconds: 60
+  # Actif : durée du vol
+  flight-seconds: 4
+  # Durée de la brûlure des ennemis sous toi
+  burn-seconds: 4
