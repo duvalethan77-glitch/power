@@ -1,0 +1,13 @@
+name: Power
+version: ${project.version}
+main: com.power.PowerPlugin
+api-version: "1.21"
+description: Cinq pouvoirs (Strength, Speed, Saturation, Health, Void) obtenus via des potions.
+commands:
+  power:
+    description: Gérer les pouvoirs
+    usage: /power premove | /power info | /power give <joueur> <pouvoir> | /power remove <joueur>
+permissions:
+  power.admin:
+    description: Donner et retirer des pouvoirs aux autres joueurs
+    default: op
